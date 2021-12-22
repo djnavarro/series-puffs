@@ -23,7 +23,7 @@ manifest <- tibble::tibble(path = paths) %>%
   ) %>%
   dplyr::mutate(
     resolution = as.integer(resolution),
-    date = "2021-10-05"
+    date = lubridate::today() %>% as.character()
   ) %>%
   dplyr::arrange(date, img_id)
 

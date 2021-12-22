@@ -18,7 +18,7 @@ manifest <- tibble::tibble(path = paths) %>%
   ) %>%
   tidyr::separate(
     col = filespec,
-    into = c("series", "img_id"),
+    into = c("series", "sys_id", "img_id"),
     sep = "_"
   ) %>%
   dplyr::mutate(
